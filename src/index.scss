@@ -1,0 +1,73 @@
+$maincolor:#1E1E1E;
+$fontcolor:#FFFFFF;
+$buttoncolor:#E50914;
+
+body{
+background: $maincolor;
+}
+.movie-title{
+color: $buttoncolor;
+margin: 10px;
+}
+.load{
+  color: $buttoncolor;
+}
+.movie-overview{
+  color: $fontcolor;
+  line-height: 1.5;
+  width: 100%;
+  height: 50%;
+}
+.tv-title{
+  color: $buttoncolor;
+}
+.tv-overview{
+  @extend .movie-overview;
+}
+.movie {
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  transition: transform 0.3s, border-color 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: $buttoncolor;
+
+    img {
+      opacity: 0.4;
+    }
+
+
+    .movie-overview {
+      color: #6c757d;
+    }
+  }
+}
+.tv{
+  @extend .movie;
+}
+.person-card{
+  margin: 10px;
+  color:$fontcolor;
+text-align: center;
+}
+.text{
+  color: #6c757d;
+  margin: 20px;
+  text-align: center;
+}
+.overview-details{
+  color:  #4d4a4a;
+  border: 1px solid #4d4a4a;
+  background: #FFFFFF;
+ margin-top: 20px;
+}
+.details-img{
+  img{
+    width: 40%;
+  }
+
+  
+}
